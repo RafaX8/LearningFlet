@@ -15,13 +15,13 @@ class TextEditor(ft.UserControl):
         )
 
     def save_text(self, e: ft.ControlEvent) -> None:
-        with open('idently_tutorials/idently_a_cool_notepad/text.txt', 'w') as f:
+        with open('text.txt', 'w') as f:
             f.write(self.text_field.value)
 
     def read_text(self) -> str | None:
         self.text_field.hint_text = 'Welcome to your notepad!'
         try:
-            with open('idently_tutorials/idently_a_cool_notepad/text.txt', 'r') as f:
+            with open('text.txt', 'r') as f:
                 return f.read()
         except FileNotFoundError:
             return None
