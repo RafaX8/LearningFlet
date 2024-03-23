@@ -59,6 +59,7 @@ def main(page: ft.Page):
     page.theme = ft.Theme(
         color_scheme_seed=ft.colors.BLUE
     )
+    page.scroll = ft.ScrollMode.AUTO
     page.add(
         ft.SafeArea(
             ft.Stack(
